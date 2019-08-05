@@ -95,6 +95,12 @@ $dict['value']['announce']['strlen'] = strlen($dict['value']['announce']['string
 /*if ($announce_urls[1] != "") // add multi-tracker
 {
 	$dict['value']['announce-list']['type'] = "list";
+	著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：Rhilip
+链接：https://blog.rhilip.info/archives/1036/
+来源：https://blog.rhilip.info/
+        $dict['value']['announce']=bdec(benc_str( get_protocol_prefix() . $announce_urls[0]));  // change announce url to local
 	$dict['value']['announce-list']['value'][0]['type'] = "list";
 	$dict['value']['announce-list']['value'][0]['value'][0]["type"] = "string";
 	$dict['value']['announce-list']['value'][0]['value'][0]["value"] = $ssl_torrent . $announce_urls[0] . "?passkey=$CURUSER[passkey]";
