@@ -51,6 +51,15 @@ foreach(array("numwant", "num want", "num_want") as $k)
 $seeder = ($left == 0) ? "yes" : "no";
 
 // check passkey
+著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：Rhilip
+链接：https://blog.rhilip.info/archives/1010/
+来源：https://blog.rhilip.info/
+
+if (isset($_SERVER["HTTP_Want-Digest"]) || strpos($peer_id, $key) !== false) {
+    err("Anti-Cheater: You may use Aria2");
+}
 if (!$az = $Cache->get_value('user_passkey_'.$passkey.'_content')){
 	$res = sql_query("SELECT id, downloadpos, enabled, uploaded, downloaded, class, parked, clientselect, showclienterror FROM users WHERE passkey=". sqlesc($passkey)." LIMIT 1");
 	$az = mysql_fetch_array($res);
